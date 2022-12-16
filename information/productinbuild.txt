@@ -1,0 +1,10 @@
+
+1). Add a build script under package.json
+ "build": "vite build"
+
+2). You have to give a relative url for input css files for example : 
+<link rel="stylesheet" href="index.css"> -> will not word
+<link rel="stylesheet" href="/index.css"> -> will work
+
+3). Run followind command to generate the productin build of your project
+ > npm run build

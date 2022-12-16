@@ -1,0 +1,23 @@
+
+> npm install -D tailwindcss
+> npx tailwindcss init
+
+tailwind.Config.js -
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+input.css -
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+npx tailwindcss -i ./input.css -o ./css/output.css --watch
+
+import the output.css file in the main html file
+<link href="/css/output.css" rel="stylesheet">
